@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* ═══════════════════════════════════════
+   PES DESIGN SYSTEM — Enterprise Tokens
+   Inspired by Pioneers E-School aesthetic
+   ═══════════════════════════════════════ */
+:root {
+  /* Navy palette */
+  --navy-900: #0B1A34;
+  --navy-800: #112444;
+  --navy-700: #163055;
+  --navy-600: #1C3D6E;
+  --navy-500: #224B87;
+  --navy-400: #2E5FA0;
+  --navy-300: #4A7EC0;
+  --navy-100: #D6E4F7;
+  --navy-50:  #EDF3FB;
+
+  /* Orange accent */
+  --orange-700: #B85E0A;
+  --orange-600: #D46E0E;
+  --orange-500: #E8821C;
+  --orange-400: #F09640;
+  --orange-100: #FDEBD7;
+  --orange-50:  #FFF5EB;
+
+  /* Neutrals */
+  --gray-900: #18202F;
+  --gray-700: #374151;
+  --gray-600: #4B5563;
+  --gray-500: #6B7280;
+  --gray-400: #9CA3AF;
+  --gray-300: #D1D5DB;
+  --gray-200: #E5E8EF;
+  --gray-100: #F1F4F9;
+  --gray-50:  #F8FAFC;
+  --white:    #FFFFFF;
+
+  /* Semantic */
+  --green-600: #16A34A;
+  --green-100: #DCFCE7;
+  --red-600:   #DC2626;
+  --red-100:   #FEE2E2;
+  --amber-600: #D97706;
+  --amber-100: #FEF3C7;
+  --teal-600:  #0D9488;
+  --teal-100:  #CCFBF1;
+
+  /* Layout */
+  --sidebar-w: 252px;
+  --header-h:  62px;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+  --shadow-md:  0 4px 12px rgba(0,0,0,.09), 0 2px 4px rgba(0,0,0,.06);
+  --shadow-lg:  0 10px 24px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.07);
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 15px; }
+
+body {
+  font-family: 'Cairo', 'Segoe UI', system-ui, sans-serif;
+  background: var(--gray-100);
+  color: var(--gray-900);
+  direction: rtl;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 99px; }
+
+/* Focus ring */
+:focus-visible { outline: 2px solid var(--navy-400); outline-offset: 2px; }
+
+/* PES Card */
+.pes-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* PES Table */
+.pes-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.pes-table thead th {
+  background: var(--gray-50);
+  color: var(--gray-500);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--gray-200);
+  white-space: nowrap;
+}
+.pes-table tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--gray-100);
+  color: var(--gray-700);
+  vertical-align: middle;
+}
+.pes-table tbody tr:last-child td { border-bottom: none; }
+.pes-table tbody tr:hover td { background: var(--navy-50); }
+
+/* PES Badge */
+.pes-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.pes-badge-green  { background: var(--green-100); color: var(--green-600); }
+.pes-badge-red    { background: var(--red-100);   color: var(--red-600); }
+.pes-badge-amber  { background: var(--amber-100); color: var(--amber-600); }
+.pes-badge-navy   { background: var(--navy-100);  color: var(--navy-600); }
+.pes-badge-teal   { background: var(--teal-100);  color: var(--teal-600); }
+.pes-badge-orange { background: var(--orange-100);color: var(--orange-600); }
+
+/* PES Button */
+.pes-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .18s ease;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.pes-btn-primary {
+  background: var(--orange-500);
+  color: var(--white);
+  border-color: var(--orange-600);
+}
+.pes-btn-primary:hover { background: var(--orange-600); }
+
+.pes-btn-navy {
+  background: var(--navy-700);
+  color: var(--white);
+  border-color: var(--navy-800);
+}
+.pes-btn-navy:hover { background: var(--navy-800); }
+
+.pes-btn-ghost {
+  background: transparent;
+  color: var(--gray-600);
+  border-color: var(--gray-300);
+}
+.pes-btn-ghost:hover { background: var(--gray-100); color: var(--gray-900); }
+
+/* PES Input */
+.pes-input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--gray-900);
+  background: var(--white);
+  transition: border-color .15s;
+}
+.pes-input:focus { outline: none; border-color: var(--navy-400); box-shadow: 0 0 0 3px var(--navy-50); }
+.pes-input::placeholder { color: var(--gray-400); }
+
+/* PES Label */
+.pes-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 5px;
+}
+
+/* PES Section header */
+.pes-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.pes-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+/* KPI Card */
+.pes-kpi {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.pes-kpi::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 4px; height: 100%;
+  border-radius: 99px 0 0 99px;
+}
+.pes-kpi-navy::before  { background: var(--navy-500); }
+.pes-kpi-orange::before { background: var(--orange-500); }
+.pes-kpi-green::before { background: var(--green-600); }
+.pes-kpi-teal::before  { background: var(--teal-600); }
+.pes-kpi-value { font-size: 1.8rem; font-weight: 800; color: var(--gray-900); line-height: 1; }
+.pes-kpi-label { font-size: 0.8rem; color: var(--gray-500); margin-top: 4px; font-weight: 500; }
+.pes-kpi-icon {
+  width: 42px; height: 42px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 12px;
+}
+.pes-kpi-icon-navy   { background: var(--navy-50); color: var(--navy-600); }
+.pes-kpi-icon-orange { background: var(--orange-50); color: var(--orange-600); }
+.pes-kpi-icon-green  { background: var(--green-100); color: var(--green-600); }
+.pes-kpi-icon-teal   { background: var(--teal-100); color: var(--teal-600); }
+
+/* Sidebar overrides — these force the new sidebar look */
+.pes-sidebar {
+  background: var(--navy-800) !important;
+  width: var(--sidebar-w) !important;
+  border-left: 1px solid var(--navy-700);
+}
+.pes-sidebar-logo-area {
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.pes-sidebar-section-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.28);
+  padding: 14px 16px 4px;
+}
+.pes-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  color: rgba(255,255,255,.62);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  margin: 1px 8px;
+  transition: all .15s;
+  border: none;
+  background: transparent;
+  width: calc(100% - 16px);
+  text-align: right;
+  font-family: inherit;
+}
+.pes-sidebar-item:hover {
+  background: rgba(255,255,255,.07);
+  color: var(--white);
+}
+.pes-sidebar-item.active {
+  background: var(--orange-500);
+  color: var(--white);
+  font-weight: 700;
+}
+.pes-sidebar-item.active svg { opacity: 1; }
+
+/* ── Animations ── */
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── Auth Layout ── */
+.auth-brand-panel { display: none; }
+@media (min-width: 1024px) {
+  .auth-brand-panel { display: flex !important; }
+}
+
+/* ── OTP inputs ── */
+.otp-box:focus {
+  border-color: var(--navy-400) !important;
+  box-shadow: 0 0 0 3px var(--navy-50) !important;
+  outline: none !important;
+}
+
+/* ── Loading spinner ── */
+.spin { animation: spin 0.7s linear infinite; }
